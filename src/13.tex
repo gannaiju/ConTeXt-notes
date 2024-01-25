@@ -66,7 +66,7 @@
    width=460pt]
 \stoptyping
 
-\noindent 上述设定，实现了页面布局中页面总宽度值 640 pt 的分配，但是要注意一点，\type{backspace} 的值等于 4 个以 \type{left} 为前缀的参数值之和，虽然在设定了它的各个分量后，但 \ConTeXt\ 在遇到默认的 \type{backspace} 值与实际的 \type{left...} 参数值之和不符时，会根据 \type{backspace} 值进行页面布局。倘若我们不关心 \type{left...} 参数，即 \ConTeXt\ 默认对页面左侧留白区域默认如何分配，仅需要让 \ConTeXt\ 知道 \type{backspace=90pt}，则上述代码可简化为
+\noindent 上述设定，实现了页面布局中页面总宽度值 640 pt 的分配，但是要注意一点，\type{backspace} 的值等于 4 个以 \type{left} 为前缀的参数值之和，虽然设定了它的各个分量，但 \ConTeXt\ 在遇到默认的 \type{backspace} 值与实际的 \type{left...} 参数值之和不符时，会根据 \type{backspace} 值进行页面布局。倘若我们不关心 \type{left...} 参数，即 \ConTeXt\ 默认对页面左侧留白区域默认如何分配，仅需要让 \ConTeXt\ 知道 \type{backspace=90pt}，则上述代码可简化为
 
 \starttyping[option=TEX]
 \setuplayout
@@ -137,7 +137,7 @@ topspace=0pt,height=middle,bottom=0pt
 \setupinterlinespace[line=28pt]
 \stoptyping
 
-以下代码设置了了第 1 级列表样式，（1）定义一个新的列表项符号，将其设置列表项默认符号；（2）消除列表项之间的额外间距；（3）列表项的符号和内容之间插入 .5em 的间距；（4）列表前后各空 1/4 行，因为在幻灯片中，纵向空间颇为珍贵。
+以下代码设置了第 1 级列表样式，（1）定义一个新的列表项符号，将其设置列表项默认符号；（2）消除列表项之间的额外间距；（3）列表项的符号和内容之间插入 .5em 的间距；（4）列表前后各空 1/4 行，因为在幻灯片中，纵向空间颇为珍贵。
 
 \starttyping[option=MP]
 \startuseMPgraphic{square}
@@ -189,7 +189,7 @@ topspace=0pt,height=middle,bottom=0pt
 \stoptyping
 \midaligned{\externalfigure[13/slides-2.pdf][width=.6\textwidth,frame=on]}
 
-\noindent 上述代码使用了 \ConTeXt\ 的 \type{buffer} 环境和循环宏 \type{\dorecurse}。所谓 \type{buff}，是一个可以设定名字的缓存，它可以包含 \ConTeXt\ 排版代码。\type{\getbuffer} 可获得指定名字的缓存中所包含的全部代码。\type{\dorecurse} 可以将其所含内容重复指定次数。上述代码所产生的效果是生成十页内容相同的幻灯片。
+\noindent 上述代码使用了 \ConTeXt\ 的 \type{buffer} 环境和循环宏 \type{\dorecurse}。所谓 \type{buffer}，是一个可以设定名字的缓存，它可以包含 \ConTeXt\ 排版代码。\type{\getbuffer} 可获得指定名字的缓存中所包含的全部代码。\type{\dorecurse} 可以将其所含内容重复指定次数。上述代码所产生的效果是生成十页内容相同的幻灯片。
 
 截止至此，我们第一次在示例中使用有编号标题。对于 \type{\chapter} 建议在幻灯片样式中增加以下设定，将其数字编号更改为中文编号，另外设置编号不参与对齐，亦即只有标题内容参与对齐：
 
@@ -253,7 +253,7 @@ draw q xsized w;
 
 \section{封面和致谢}
 
-幻灯片的封面和最后的致谢页皆可使用 \type{sandardmakeup} 环境制作。例如
+幻灯片的封面和最后的致谢页皆可使用 \type{standardmakeup} 环境制作。例如
 
 \index[standardmakeup]{standard makeup}
 \starttyping[option=TEX]
